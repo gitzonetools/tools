@@ -1,0 +1,25 @@
+{
+  "name": "node-g",
+  "version": "1.0.0",
+  "description": "setup your environment with the most important tools and update them easily.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "(npmts)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GitZoneTools/node-g.git"
+  },
+  "keywords": [
+    "global",
+    "node",
+    "tools",
+    "update"
+  ],
+  "author": "Lossless GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GitZoneTools/node-g/issues"
+  },
+  "homepage": "https://github.com/GitZoneTools/node-g#readme"
+}

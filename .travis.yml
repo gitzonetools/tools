@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+deploy:
+  provider: npm
+  email: npm@lossless.digital
+  api_key:
+    secure: tHwuWIQl9/AL42/TP84DnZ/QutUPlja9p4lxLtP7Nm0LXRJtAnXkZ4qKqXagLMKy2KdQiJykrHTo1bwr/e/NGtmtBLhfLpvkCKOAKfX+o9ZB7vw998aSSCKKr7IFVR/78JMkXOcmgeKaPXdkqHwX5DTVMkl5ImaX7dOuRB/VL5t+nLRchVP/vAXiyuIyKYPEPEBR7mXwRGaGvKj3Ko87qtkIx4jUaMGyA9BMYT5u9iVGY3q8IgcCIoVk+hbBx+UkISCs0UOegILldrTRS36/OMnOitDbCV43o7j9/R7VhT7pDikITmdJQ7ePC+rdCn8JsbRLntqFnvrrjWuJThF6EmiH2C8aKwcZ1YzeJf/kDgo23j5fsBFDDNQfBVuCitY0fvE7aFG5Za2JySfXn58HyROF/LM1fX8dFM9LOLf+UHNH/iMxyy+WRPrAApbjHbq/rfwbQj09oAkWB6Wvbehn9h86VxsABjE3OBFAP3y0zA/t0PB6IcGtJ9edazB6VuHyiMnucKrr7XPOBRf/t9kgWo7itGPbVfSwDUUbUpUTIJxJtQ8VMltb4RbrwVQRF5J15hEpt1Mit1aVIbcp4hyewkNvnttnO58S//A5fU4m9sHaGxi3yNq5hDpxH5Uu4cCNvC2/y2JQDUywPuwme44iKPGxGkMmeJ5Ea5hU+MCgrvM=
+  on:
+    tags: true
+    repo: GitZoneTools/node-g
