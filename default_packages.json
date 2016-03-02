@@ -1,6 +1,0 @@
-{
-  "mandatory":[
-    "typings",
-    "npm-check-updates"
-  ]
-}

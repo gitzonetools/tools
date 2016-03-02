@@ -1,0 +1,8 @@
+/// <reference path="./typings/main.d.ts" />
+var plugins = require("./npmg.plugins");
+var paths = {
+    packageBase: plugins.path.join("__dirname", "../")
+};
+module.exports = paths;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5wbWcucGF0aHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNENBQTRDO0FBQzVDLElBQU8sT0FBTyxXQUFXLGdCQUFnQixDQUFDLENBQUM7QUFDM0MsSUFBSSxLQUFLLEdBQUc7SUFDUixXQUFXLEVBQUUsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsV0FBVyxFQUFDLEtBQUssQ0FBQztDQUNwRCxDQUFBO0FBQ0QsaUJBQVMsS0FBSyxDQUFDIiwiZmlsZSI6Im5wbWcucGF0aHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvLy8gPHJlZmVyZW5jZSBwYXRoPVwiLi90eXBpbmdzL21haW4uZC50c1wiIC8+XG5pbXBvcnQgcGx1Z2lucyA9IHJlcXVpcmUoXCIuL25wbWcucGx1Z2luc1wiKTtcbmxldCBwYXRocyA9IHtcbiAgICBwYWNrYWdlQmFzZTogcGx1Z2lucy5wYXRoLmpvaW4oXCJfX2Rpcm5hbWVcIixcIi4uL1wiKVxufVxuZXhwb3J0ID0gcGF0aHM7Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

@@ -1,0 +1,7 @@
+{
+  "default":[
+    "cash",
+    "npm-check-updates",
+    "typings"
+  ]
+}

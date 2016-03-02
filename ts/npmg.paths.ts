@@ -1,2 +1,6 @@
 /// <reference path="./typings/main.d.ts" />
-import paths = require("./npmg.paths");
+import plugins = require("./npmg.plugins");
+let paths = {
+    packageBase: plugins.path.join("__dirname","../")
+}
+export = paths;
