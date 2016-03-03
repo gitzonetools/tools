@@ -3,7 +3,9 @@ import plugins = require("./npmg.plugins");
 import paths = require("./npmg.paths");
 let installExec = function(packageNames:string[]){
     for (let packageName in packageNames){
-        plugins.shelljs.exec("npm install -g " + packageName);
+        let execCommand = "npm install -g " + packageNames[packageName];
+        plugins.beautylog.info("now installing " + packageNames[packageName]);
+        plugins.shelljs.exec(execCommand);
     };
 };
 
@@ -15,10 +17,11 @@ let install = function(packageSetArg:String){
     switch (packageSetArg){
         case "default":
             installExec(packageLibrary.default);
+            break;
         default:
             plugins.beautylog.warn("no set has been specified");
+            break;
     }
-    installExec(packageLibrary.default);
 };
 
 export = install;
