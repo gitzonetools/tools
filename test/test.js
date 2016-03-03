@@ -1,4 +1,4 @@
-/// <reference path="../ts/typings/main.d.ts" 
+/// <reference path="../ts/typings/main.d.ts" />
 var npmg = require("../dist/index.js");
 var smartenv = require("smartenv");
 var environment = smartenv.getEnv();
