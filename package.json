@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GitZoneTools/node-g.git"
+    "url": "git+https://github.com/GitZoneTools/npmg.git"
   },
   "keywords": [
     "global",
@@ -19,9 +19,9 @@
   "author": "Lossless GmbH",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GitZoneTools/node-g/issues"
+    "url": "https://github.com/GitZoneTools/npmg/issues"
   },
-  "homepage": "https://github.com/GitZoneTools/node-g#readme",
+  "homepage": "https://github.com/GitZoneTools/npmg#readme",
   "devDependencies": {
     "npmts": "^3.3.2"
   },
