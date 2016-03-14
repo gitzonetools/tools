@@ -6,6 +6,9 @@
   "scripts": {
     "test": "(npmts)"
   },
+  "bin": {
+    "npmg": "dist/cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GitZoneTools/npmg.git"
@@ -23,7 +26,7 @@
   },
   "homepage": "https://github.com/GitZoneTools/npmg#readme",
   "devDependencies": {
-    "npmts": "^3.3.2",
+    "npmts": "^3.5.0",
     "smartenv": "^1.2.0"
   },
   "dependencies": {
@@ -31,6 +34,6 @@
     "q": "^1.4.1",
     "shelljs": "^0.6.0",
     "smartcli": "0.0.11",
-    "smartfile": "0.0.11"
+    "smartfile": "1.0.1"
   }
 }
