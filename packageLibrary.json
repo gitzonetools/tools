@@ -2,6 +2,7 @@
   "default":[
     "cash",
     "npm-check-updates",
-    "typings"
+    "npmdocker",
+    "npmts"
   ]
 }
