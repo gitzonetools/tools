@@ -1,8 +1,8 @@
 {
   "default":[
-    "cash",
     "npm-check-updates",
     "npmdocker",
-    "npmts"
+    "npmts",
+    "gitzone"
   ]
 }
