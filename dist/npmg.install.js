@@ -1,26 +1,36 @@
 "use strict";
-/// <reference path="./typings/main.d.ts" />
-var plugins = require("./npmg.plugins");
-var paths = require("./npmg.paths");
-var installExec = function (packageNames) {
-    for (var packageName in packageNames) {
-        var execCommand = "npm install -g " + packageNames[packageName];
-        plugins.beautylog.info("now installing " + packageNames[packageName]);
-        plugins.shelljs.exec(execCommand);
-    }
-    ;
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 };
-var packageLibrary = plugins.smartfile.readFileToObject(plugins.path.join(paths.packageBase, "packageLibrary.json"));
-var install = function (packageSetArg) {
+Object.defineProperty(exports, "__esModule", { value: true });
+const plugins = require("./npmg.plugins");
+const paths = require("./npmg.paths");
+let installExec = (packageNames) => __awaiter(this, void 0, void 0, function* () {
+    let installString = '';
+    for (let packageName of packageNames) {
+        installString = installString + `${packageName} `;
+    }
+    yield plugins.smartshell.exec(`yarn global remove ${installString}`);
+    for (let packageName of packageNames) {
+        plugins.beautylog.info(`now preparing ${packageName}`);
+        yield plugins.smartshell.exec(`yarn global remove ${packageName}`);
+    }
+    yield plugins.smartshell.exec(`yarn global add ${installString}`);
+});
+let packageLibrary = plugins.smartfile.fs.toObjectSync(plugins.path.join(paths.packageBase, 'package_library.json'));
+exports.install = (packageSetArg) => __awaiter(this, void 0, void 0, function* () {
     switch (packageSetArg) {
-        case "default":
-            installExec(packageLibrary.default);
+        case 'default':
+            yield installExec(packageLibrary.default);
             break;
         default:
-            plugins.beautylog.warn("no set has been specified");
+            plugins.beautylog.warn('no set has been specified');
             break;
     }
-};
-module.exports = install;
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5wbWcuaW5zdGFsbC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsNENBQTRDO0FBQzVDLElBQU8sT0FBTyxXQUFXLGdCQUFnQixDQUFDLENBQUM7QUFDM0MsSUFBTyxLQUFLLFdBQVcsY0FBYyxDQUFDLENBQUM7QUFDdkMsSUFBSSxXQUFXLEdBQUcsVUFBUyxZQUFxQjtJQUM1QyxHQUFHLENBQUMsQ0FBQyxJQUFJLFdBQVcsSUFBSSxZQUFZLENBQUMsQ0FBQSxDQUFDO1FBQ2xDLElBQUksV0FBVyxHQUFHLGlCQUFpQixHQUFHLFlBQVksQ0FBQyxXQUFXLENBQUMsQ0FBQztRQUNoRSxPQUFPLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxpQkFBaUIsR0FBRyxZQUFZLENBQUMsV0FBVyxDQUFDLENBQUMsQ0FBQztRQUN0RSxPQUFPLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUN0QyxDQUFDO0lBQUEsQ0FBQztBQUNOLENBQUMsQ0FBQztBQUVGLElBQUksY0FBYyxHQUFHLE9BQU8sQ0FBQyxTQUFTLENBQUMsZ0JBQWdCLENBQ25ELE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLEtBQUssQ0FBQyxXQUFXLEVBQUMscUJBQXFCLENBQUMsQ0FDN0QsQ0FBQztBQUVGLElBQUksT0FBTyxHQUFHLFVBQVMsYUFBb0I7SUFDdkMsTUFBTSxDQUFDLENBQUMsYUFBYSxDQUFDLENBQUEsQ0FBQztRQUNuQixLQUFLLFNBQVM7WUFDVixXQUFXLENBQUMsY0FBYyxDQUFDLE9BQU8sQ0FBQyxDQUFDO1lBQ3BDLEtBQUssQ0FBQztRQUNWO1lBQ0ksT0FBTyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsMkJBQTJCLENBQUMsQ0FBQztZQUNwRCxLQUFLLENBQUM7SUFDZCxDQUFDO0FBQ0wsQ0FBQyxDQUFDO0FBRUYsaUJBQVMsT0FBTyxDQUFDIiwiZmlsZSI6Im5wbWcuaW5zdGFsbC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vLyA8cmVmZXJlbmNlIHBhdGg9XCIuL3R5cGluZ3MvbWFpbi5kLnRzXCIgLz5cbmltcG9ydCBwbHVnaW5zID0gcmVxdWlyZShcIi4vbnBtZy5wbHVnaW5zXCIpO1xuaW1wb3J0IHBhdGhzID0gcmVxdWlyZShcIi4vbnBtZy5wYXRoc1wiKTtcbmxldCBpbnN0YWxsRXhlYyA9IGZ1bmN0aW9uKHBhY2thZ2VOYW1lczpzdHJpbmdbXSl7XG4gICAgZm9yIChsZXQgcGFja2FnZU5hbWUgaW4gcGFja2FnZU5hbWVzKXtcbiAgICAgICAgbGV0IGV4ZWNDb21tYW5kID0gXCJucG0gaW5zdGFsbCAtZyBcIiArIHBhY2thZ2VOYW1lc1twYWNrYWdlTmFtZV07XG4gICAgICAgIHBsdWdpbnMuYmVhdXR5bG9nLmluZm8oXCJub3cgaW5zdGFsbGluZyBcIiArIHBhY2thZ2VOYW1lc1twYWNrYWdlTmFtZV0pO1xuICAgICAgICBwbHVnaW5zLnNoZWxsanMuZXhlYyhleGVjQ29tbWFuZCk7XG4gICAgfTtcbn07XG5cbmxldCBwYWNrYWdlTGlicmFyeSA9IHBsdWdpbnMuc21hcnRmaWxlLnJlYWRGaWxlVG9PYmplY3QoXG4gICAgcGx1Z2lucy5wYXRoLmpvaW4ocGF0aHMucGFja2FnZUJhc2UsXCJwYWNrYWdlTGlicmFyeS5qc29uXCIpXG4pO1xuXG5sZXQgaW5zdGFsbCA9IGZ1bmN0aW9uKHBhY2thZ2VTZXRBcmc6U3RyaW5nKXtcbiAgICBzd2l0Y2ggKHBhY2thZ2VTZXRBcmcpe1xuICAgICAgICBjYXNlIFwiZGVmYXVsdFwiOlxuICAgICAgICAgICAgaW5zdGFsbEV4ZWMocGFja2FnZUxpYnJhcnkuZGVmYXVsdCk7XG4gICAgICAgICAgICBicmVhaztcbiAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgIHBsdWdpbnMuYmVhdXR5bG9nLndhcm4oXCJubyBzZXQgaGFzIGJlZW4gc3BlY2lmaWVkXCIpO1xuICAgICAgICAgICAgYnJlYWs7XG4gICAgfVxufTtcblxuZXhwb3J0ID0gaW5zdGFsbDsiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibnBtZy5pbnN0YWxsLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vdHMvbnBtZy5pbnN0YWxsLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQSwwQ0FBMkM7QUFDM0Msc0NBQXVDO0FBRXZDLElBQUksV0FBVyxHQUFHLENBQU8sWUFBc0I7SUFDN0MsSUFBSSxhQUFhLEdBQUcsRUFBRSxDQUFBO0lBQ3RCLEdBQUcsQ0FBQyxDQUFDLElBQUksV0FBVyxJQUFJLFlBQVksQ0FBQyxDQUFDLENBQUM7UUFDckMsYUFBYSxHQUFHLGFBQWEsR0FBRyxHQUFHLFdBQVcsR0FBRyxDQUFBO0lBQ25ELENBQUM7SUFDRCxNQUFNLE9BQU8sQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLHNCQUFzQixhQUFhLEVBQUUsQ0FBQyxDQUFBO0lBQ3BFLEdBQUcsQ0FBQyxDQUFDLElBQUksV0FBVyxJQUFJLFlBQVksQ0FBQyxDQUFDLENBQUM7UUFDckMsT0FBTyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLFdBQVcsRUFBRSxDQUFDLENBQUE7UUFDdEQsTUFBTSxPQUFPLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxzQkFBc0IsV0FBVyxFQUFFLENBQUMsQ0FBQTtJQUNwRSxDQUFDO0lBQ0QsTUFBTSxPQUFPLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxtQkFBbUIsYUFBYSxFQUFFLENBQUMsQ0FBQTtBQUNuRSxDQUFDLENBQUEsQ0FBQTtBQUVELElBQUksY0FBYyxHQUFHLE9BQU8sQ0FBQyxTQUFTLENBQUMsRUFBRSxDQUFDLFlBQVksQ0FDcEQsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLFdBQVcsRUFBRSxzQkFBc0IsQ0FBQyxDQUM3RCxDQUFDO0FBRVMsUUFBQSxPQUFPLEdBQUcsQ0FBTyxhQUFxQjtJQUMvQyxNQUFNLENBQUMsQ0FBQyxhQUFhLENBQUMsQ0FBQyxDQUFDO1FBQ3RCLEtBQUssU0FBUztZQUNaLE1BQU0sV0FBVyxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsQ0FBQTtZQUN6QyxLQUFLLENBQUE7UUFDUDtZQUNFLE9BQU8sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLDJCQUEyQixDQUFDLENBQUM7WUFDcEQsS0FBSyxDQUFBO0lBQ1QsQ0FBQztBQUNILENBQUMsQ0FBQSxDQUFBIn0=

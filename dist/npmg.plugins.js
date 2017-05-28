@@ -1,8 +1,14 @@
 "use strict";
-/// <reference path="./typings/main.d.ts" />
-exports.beautylog = require("beautylog");
-exports.path = require("path");
-exports.shelljs = require("shelljs");
-exports.smartfile = require("smartfile");
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5wbWcucGx1Z2lucy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsNENBQTRDO0FBQ2pDLGlCQUFTLEdBQUcsT0FBTyxDQUFDLFdBQVcsQ0FBQyxDQUFDO0FBQ2pDLFlBQUksR0FBRyxPQUFPLENBQUMsTUFBTSxDQUFDLENBQUM7QUFDcEIsZUFBTyxXQUFXLFNBQVMsQ0FBQyxDQUFDO0FBQ2hDLGlCQUFTLEdBQUcsT0FBTyxDQUFDLFdBQVcsQ0FBQyxDQUFDIiwiZmlsZSI6Im5wbWcucGx1Z2lucy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vLyA8cmVmZXJlbmNlIHBhdGg9XCIuL3R5cGluZ3MvbWFpbi5kLnRzXCIgLz5cbmV4cG9ydCBsZXQgYmVhdXR5bG9nID0gcmVxdWlyZShcImJlYXV0eWxvZ1wiKTtcbmV4cG9ydCBsZXQgcGF0aCA9IHJlcXVpcmUoXCJwYXRoXCIpO1xuZXhwb3J0IGltcG9ydCBzaGVsbGpzID0gcmVxdWlyZShcInNoZWxsanNcIik7XG5leHBvcnQgbGV0IHNtYXJ0ZmlsZSA9IHJlcXVpcmUoXCJzbWFydGZpbGVcIik7XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+Object.defineProperty(exports, "__esModule", { value: true });
+require("typings-global");
+const beautylog = require("beautylog");
+exports.beautylog = beautylog;
+const path = require("path");
+exports.path = path;
+const smartcli = require("smartcli");
+exports.smartcli = smartcli;
+const smartfile = require("smartfile");
+exports.smartfile = smartfile;
+const smartshell = require("smartshell");
+exports.smartshell = smartshell;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibnBtZy5wbHVnaW5zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vdHMvbnBtZy5wbHVnaW5zLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsMEJBQXVCO0FBQ3ZCLHVDQUFzQztBQU9wQyw4QkFBUztBQU5YLDZCQUE0QjtBQU8xQixvQkFBSTtBQU5OLHFDQUFvQztBQU9sQyw0QkFBUTtBQU5WLHVDQUFzQztBQU9wQyw4QkFBUztBQU5YLHlDQUF3QztBQU90QyxnQ0FBVSJ9

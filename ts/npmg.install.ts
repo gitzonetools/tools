@@ -1,27 +1,30 @@
-/// <reference path="./typings/main.d.ts" />
-import plugins = require("./npmg.plugins");
-import paths = require("./npmg.paths");
-let installExec = function(packageNames:string[]){
-    for (let packageName in packageNames){
-        let execCommand = "npm install -g " + packageNames[packageName];
-        plugins.beautylog.info("now installing " + packageNames[packageName]);
-        plugins.shelljs.exec(execCommand);
-    };
-};
+import plugins = require('./npmg.plugins');
+import paths = require('./npmg.paths');
 
-let packageLibrary = plugins.smartfile.readFileToObject(
-    plugins.path.join(paths.packageBase,"packageLibrary.json")
+let installExec = async (packageNames: string[]) => {
+  let installString = ''
+  for (let packageName of packageNames) {
+    installString = installString + `${packageName} `
+  }
+  await plugins.smartshell.exec(`yarn global remove ${installString}`)
+  for (let packageName of packageNames) {
+    plugins.beautylog.info(`now preparing ${packageName}`)
+    await plugins.smartshell.exec(`yarn global remove ${packageName}`)
+  }
+  await plugins.smartshell.exec(`yarn global add ${installString}`)
+}
+
+let packageLibrary = plugins.smartfile.fs.toObjectSync(
+  plugins.path.join(paths.packageBase, 'package_library.json')
 );
 
-let install = function(packageSetArg:String){
-    switch (packageSetArg){
-        case "default":
-            installExec(packageLibrary.default);
-            break;
-        default:
-            plugins.beautylog.warn("no set has been specified");
-            break;
-    }
-};
-
-export = install;
+export let install = async (packageSetArg: String) => {
+  switch (packageSetArg) {
+    case 'default':
+      await installExec(packageLibrary.default)
+      break
+    default:
+      plugins.beautylog.warn('no set has been specified');
+      break
+  }
+}

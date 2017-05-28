@@ -3,6 +3,9 @@
     "npm-check-updates",
     "npmdocker",
     "npmts",
-    "gitzone"
+    "gitzone",
+    "browser-sync",
+    "typescript",
+    "tslint"
   ]
 }

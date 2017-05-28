@@ -1,9 +1,5 @@
 "use strict";
-/// <reference path="./typings/main.d.ts" />
-var plugins = require("./npmg.plugins");
-var paths = {
-    packageBase: plugins.path.join("__dirname", "../")
-};
-module.exports = paths;
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5wbWcucGF0aHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLDRDQUE0QztBQUM1QyxJQUFPLE9BQU8sV0FBVyxnQkFBZ0IsQ0FBQyxDQUFDO0FBQzNDLElBQUksS0FBSyxHQUFHO0lBQ1IsV0FBVyxFQUFFLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLFdBQVcsRUFBQyxLQUFLLENBQUM7Q0FDcEQsQ0FBQTtBQUNELGlCQUFTLEtBQUssQ0FBQyIsImZpbGUiOiJucG1nLnBhdGhzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8vIDxyZWZlcmVuY2UgcGF0aD1cIi4vdHlwaW5ncy9tYWluLmQudHNcIiAvPlxuaW1wb3J0IHBsdWdpbnMgPSByZXF1aXJlKFwiLi9ucG1nLnBsdWdpbnNcIik7XG5sZXQgcGF0aHMgPSB7XG4gICAgcGFja2FnZUJhc2U6IHBsdWdpbnMucGF0aC5qb2luKFwiX19kaXJuYW1lXCIsXCIuLi9cIilcbn1cbmV4cG9ydCA9IHBhdGhzOyJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+Object.defineProperty(exports, "__esModule", { value: true });
+const plugins = require("./npmg.plugins");
+exports.packageBase = plugins.path.join('__dirname', '../');
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibnBtZy5wYXRocy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uL3RzL25wbWcucGF0aHMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSwwQ0FBMkM7QUFFaEMsUUFBQSxXQUFXLEdBQUcsT0FBTyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsV0FBVyxFQUFFLEtBQUssQ0FBQyxDQUFBIn0=

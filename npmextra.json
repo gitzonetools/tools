@@ -1,0 +1,10 @@
+{
+  "npmts": {
+    "cli": true
+  },
+  "npmci": {
+    "globalNpmTools": [
+      "npmts"
+    ]
+  }
+}

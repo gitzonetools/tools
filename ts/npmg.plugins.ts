@@ -1,5 +1,14 @@
-/// <reference path="./typings/main.d.ts" />
-export let beautylog = require("beautylog");
-export let path = require("path");
-export import shelljs = require("shelljs");
-export let smartfile = require("smartfile");
+import 'typings-global'
+import * as beautylog from 'beautylog'
+import * as path from 'path'
+import * as smartcli from 'smartcli'
+import * as smartfile from 'smartfile'
+import * as smartshell from 'smartshell'
+
+export {
+  beautylog,
+  path,
+  smartcli,
+  smartfile,
+  smartshell
+}

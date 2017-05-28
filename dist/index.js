@@ -1,8 +1,5 @@
 "use strict";
-var install = require("./npmg.install");
-var npmg = {
-    install: install
-};
-module.exports = npmg;
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxJQUFPLE9BQU8sV0FBVyxnQkFBZ0IsQ0FBQyxDQUFDO0FBQzNDLElBQUksSUFBSSxHQUFHO0lBQ1AsT0FBTyxFQUFFLE9BQU87Q0FDbkIsQ0FBQztBQUNGLGlCQUFTLElBQUksQ0FBQyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vLyA8cmVmZXJlbmNlIHBhdGg9XCIuL3R5cGluZ3MvbWFpbi5kLnRzXCIgLz5cbmltcG9ydCBwbHVnaW5zID0gcmVxdWlyZShcIi4vbnBtZy5wbHVnaW5zXCIpO1xuaW1wb3J0IGluc3RhbGwgPSByZXF1aXJlKFwiLi9ucG1nLmluc3RhbGxcIik7XG5sZXQgbnBtZyA9IHtcbiAgICBpbnN0YWxsOiBpbnN0YWxsXG59O1xuZXhwb3J0ID0gbnBtZzsiXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=
+Object.defineProperty(exports, "__esModule", { value: true });
+const cli = require("./npmg.cli");
+cli.run();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLGtDQUFpQztBQUNqQyxHQUFHLENBQUMsR0FBRyxFQUFFLENBQUEifQ==
