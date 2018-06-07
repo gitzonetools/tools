@@ -1,11 +1,10 @@
 {
   "default":[
-    "npm-check-updates",
-    "npmdocker",
-    "npmts",
-    "gitzone",
-    "browser-sync",
+    "@gitzone/npmdocker",
+    "@gitzone/npmts",
+    "@gitzone/gitzone",
     "typescript",
-    "tslint"
+    "tslint",
+    "@gitzone/tsrun"
   ]
 }

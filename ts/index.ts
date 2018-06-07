@@ -1,3 +1,2 @@
-import plugins = require("./npmg.plugins");
-import * as cli from './npmg.cli'
-cli.run()
+import plugins = require('./tools.plugins');
+import * as cli from './tools.cli';
