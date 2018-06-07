@@ -32,7 +32,7 @@
     "tapbundle": "^1.0.13"
   },
   "dependencies": {
-    "@gitzone/tsrun": "^1.0.4",
+    "@gitzone/tsrun": "^1.0.5",
     "@pushrocks/smartcli": "^3.0.1",
     "@types/node": "^10.3.1",
     "beautylog": "^6.1.10",
