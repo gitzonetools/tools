@@ -37,7 +37,6 @@
   "dependencies": {
     "@gitzone/tsrun": "^1.2.6",
     "@pushrocks/smartcli": "^3.0.7",
-    "@pushrocks/smartenv": "^4.0.6",
     "@pushrocks/smartfile": "^7.0.2",
     "@pushrocks/smartlog": "^2.0.19",
     "@pushrocks/smartlog-destination-local": "^8.0.2",
