@@ -1,10 +1,12 @@
 {
   "default":[
-    "@gitzone/npmdocker",
-    "@gitzone/npmts",
-    "@gitzone/gitzone",
+    "@gitzone_private/gitzone",
     "typescript",
     "tslint",
-    "@gitzone/tsrun"
+    "@gitzone/tsrun",
+    "@gitzone/tsdocker",
+    "snyk",
+    "npm-check"
   ]
+  
 }

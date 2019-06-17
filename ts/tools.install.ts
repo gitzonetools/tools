@@ -1,30 +1,38 @@
 import plugins = require('./tools.plugins');
 import paths = require('./tools.paths');
+import { logger } from './tools.logging';
 
 const installExec = async (packageNames: string[]) => {
+  const smartshellInstance = new plugins.smartshell.Smartshell({
+    executor: 'bash'
+  });
+
   let installString = '';
-  for (let packageName of packageNames) {
+  for (const packageName of packageNames) {
+    logger.log('info', `Found ${packageName}!`);
     installString = installString + `${packageName} `;
   }
-  await plugins.smartshell.exec(`yarn global remove ${installString}`);
-  for (let packageName of packageNames) {
-    plugins.beautylog.info(`now preparing ${packageName}`);
-    plugins.beautylog.log(`Installing ${packageName}`);
-  }
-  await plugins.smartshell.exec(`npm install -g ${installString}`);
+  // lets remove old packages
+  const uninstallCommand = `npm uninstall -g ${installString}`;
+  const installCommand = `npm install -g ${installString}`;
+  logger.log('info', `uninstalling old packages with "${uninstallCommand}"`);
+  await smartshellInstance.exec(uninstallCommand);
+  logger.log('info', `installing tools with ${installCommand}`);
+  await smartshellInstance.exec(installCommand);
+  logger.log('ok', `installed tools successfully!`);
 };
 
-let packageLibrary = plugins.smartfile.fs.toObjectSync(
+const packageLibrary = plugins.smartfile.fs.toObjectSync(
   plugins.path.join(paths.packageBase, 'package_library.json')
 );
 
-export const install = async (packageSetArg: String) => {
+export const install = async (packageSetArg: string) => {
   switch (packageSetArg) {
     case 'default':
       await installExec(packageLibrary.default);
       break;
     default:
-      plugins.beautylog.warn('no set has been specified');
+      logger.log('warn', 'no set has been specified');
       break;
   }
 };

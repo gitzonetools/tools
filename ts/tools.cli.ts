@@ -1,11 +1,11 @@
 import * as plugins from './tools.plugins';
 import * as toolsInstall from './tools.install';
 
-let npmgSmartcli = new plugins.smartcli.Smartcli();
+const toolsCli = new plugins.smartcli.Smartcli();
 
-npmgSmartcli.addCommand('install').subscribe(async argvArg => {
+toolsCli.addCommand('install').subscribe(async argvArg => {
   toolsInstall.install('default');
 });
 
-npmgSmartcli.addVersion('no version set');
-npmgSmartcli.startParse();
+toolsCli.addVersion('no version set');
+toolsCli.startParse();

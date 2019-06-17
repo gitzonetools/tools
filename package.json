@@ -6,11 +6,11 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "tsrun test/test.ts",
-    "build": "echo \"Not needed for now\""
+    "test": "tstest test/",
+    "build": "tsbuild"
   },
   "bin": {
-    "gtools": "bin/cli.js"
+    "gtools": "cli.js"
   },
   "repository": {
     "type": "git",
@@ -29,15 +29,29 @@
   },
   "homepage": "https://github.com/GitZoneTools/npmg#readme",
   "devDependencies": {
-    "tapbundle": "^1.0.13"
+    "@gitzone/tstest": "^1.0.24",
+    "@pushrocks/tapbundle": "^3.0.9",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0"
   },
   "dependencies": {
-    "@gitzone/tsrun": "^1.0.5",
-    "@pushrocks/smartcli": "^3.0.1",
-    "@types/node": "^10.3.1",
-    "beautylog": "^6.1.10",
-    "smartenv": "^3.0.0",
-    "smartfile": "4.2.17",
-    "smartshell": "^1.0.6"
-  }
+    "@gitzone/tsrun": "^1.2.6",
+    "@pushrocks/smartcli": "^3.0.7",
+    "@pushrocks/smartenv": "^4.0.6",
+    "@pushrocks/smartfile": "^7.0.2",
+    "@pushrocks/smartlog": "^2.0.19",
+    "@pushrocks/smartlog-destination-local": "^8.0.2",
+    "@pushrocks/smartshell": "^2.0.23",
+    "@types/node": "^12.0.8"
+  },
+  "files": [
+    "ts/*",
+    "ts_web/*",
+    "dist/*",
+    "dist_web/*",
+    "assets/*",
+    "cli.js",
+    "npmextra.json",
+    "readme.md"
+  ]
 }

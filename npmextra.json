@@ -7,5 +7,15 @@
       "npmts"
     ],
     "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "gitzone",
+      "gitrepo": "tools",
+      "shortDescription": "setup your environment with the most important tools and update them easily.",
+      "npmPackagename": "@gitzone/tools",
+      "license": "MIT"
+    }
   }
 }

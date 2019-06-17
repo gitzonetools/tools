@@ -1,7 +1,11 @@
-import * as beautylog from 'beautylog';
+// node native
 import * as path from 'path';
-import * as smartcli from '@pushrocks/smartcli';
-import * as smartfile from 'smartfile';
-import * as smartshell from 'smartshell';
 
-export { beautylog, path, smartcli, smartfile, smartshell };
+// pushrocks scope
+import * as smartlog from '@pushrocks/smartlog';
+import * as smartlogDestinationLocal from '@pushrocks/smartlog-destination-local';
+import * as smartcli from '@pushrocks/smartcli';
+import * as smartfile from '@pushrocks/smartfile';
+import * as smartshell from '@pushrocks/smartshell';
+
+export { smartlog, smartlogDestinationLocal, path, smartcli, smartfile, smartshell };

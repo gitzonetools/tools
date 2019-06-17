@@ -1,7 +1,7 @@
-import { expect, tap } from 'tapbundle';
+import { expect, tap } from '@pushrocks/tapbundle';
 
 import * as npmgInstall from '../ts/tools.install';
-import * as smartenv from 'smartenv';
+import * as smartenv from '@pushrocks/smartenv';
 
 let environment = new smartenv.Smartenv();
 
