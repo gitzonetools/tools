@@ -6,7 +6,8 @@
     "@gitzone/tsrun",
     "@gitzone/tsdocker",
     "snyk",
-    "npm-check"
+    "npm-check",
+    "@losslessone_private/lole"
   ]
   
 }
