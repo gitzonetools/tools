@@ -1,6 +1,6 @@
 {
   "name": "@gitzone/tools",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "private": false,
   "description": "setup your environment with the most important tools and update them easily.",
   "main": "dist/index.js",
