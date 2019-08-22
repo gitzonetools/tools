@@ -1,13 +1,13 @@
 {
   "default":[
+    "@losslessone_private/lole",
     "@gitzone_private/gitzone",
+    "@gitzone/tsdocker",
+    "@gitzone/tsrun",
     "typescript",
     "tslint",
-    "@gitzone/tsrun",
-    "@gitzone/tsdocker",
     "snyk",
-    "npm-check",
-    "@losslessone_private/lole"
+    "npm-check"
   ]
   
 }
