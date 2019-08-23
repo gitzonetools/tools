@@ -1,3 +1,3 @@
 import plugins = require('./tools.plugins');
 
-export let packageBase = plugins.path.join('__dirname', '../');
+export const packageBase = plugins.path.join(__dirname, '../');
