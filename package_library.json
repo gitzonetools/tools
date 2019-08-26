@@ -2,6 +2,7 @@
   "default":[
     "@losslessone_private/lole",
     "@gitzone_private/gitzone",
+    "@gitzone/tsbuild",
     "@gitzone/tsdocker",
     "@gitzone/tsrun",
     "typescript",
