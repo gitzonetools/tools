@@ -23,7 +23,7 @@ const installExec = async (packageNames: string[]) => {
 };
 
 const packageLibrary = plugins.smartfile.fs.toObjectSync(
-  plugins.path.join(paths.packageBase, 'package_library.json')
+  plugins.path.join(paths.assetsDir, 'package_library.json')
 );
 
 export const install = async (packageSetArg: string) => {
