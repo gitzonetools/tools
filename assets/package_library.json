@@ -1,14 +1,16 @@
 {
   "default":[
+    "@bubblewrap/cli",
     "@losslessone_private/lole",
     "@gitzone_private/gitzone",
     "@gitzone/tsbuild",
     "@gitzone/tsdocker",
     "@gitzone/tsrun",
+    "nativescript",
     "typescript",
     "tslint",
-    "snyk",
-    "npm-check"
+    "npm-check",
+    ""
   ]
   
 }
