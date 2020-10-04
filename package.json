@@ -3,11 +3,11 @@
   "version": "2.0.19",
   "private": false,
   "description": "setup your environment with the most important tools and update them easily.",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist_ts/index.js",
+  "typings": "dist_ts/index.d.ts",
   "scripts": {
-    "test": "tstest test/",
-    "build": "tsbuild"
+    "test": "(tstest test/ --web)",
+    "build": "(tsbuild --web)"
   },
   "bin": {
     "gtools": "cli.js"
