@@ -4,7 +4,7 @@ import { logger } from './tools.logging';
 
 const installExec = async (packageNames: string[]) => {
   const smartshellInstance = new plugins.smartshell.Smartshell({
-    executor: 'bash'
+    executor: 'bash',
   });
 
   let installString = '';
